@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import Accordion from "./Accordion.vue";
 import { Button } from "../Button";
-import { AccordionItem } from "./AccordionItem.vue";
+import AccordionItem from "./AccordionItem.vue";
 
 const meta = {
   title: "Components/DataDisplay/Accordion",
