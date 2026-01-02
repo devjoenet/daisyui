@@ -1,0 +1,31 @@
+import { type Size } from "../../composables/useSizes";
+import { type Variant } from "../../composables/useVariants";
+
+export const INPUTFIELD_VARIANTS = ["default", "input-primary", "input-secondary", "input-accent", "input-info", "input-success", "input-warning", "input-error"] as const;
+export const INPUTFIELD_SIZES = ["default", "input-xs", "input-sm", "input-md", "input-lg", "input-xl"] as const;
+
+export type INPUTFIELDVariant = (typeof INPUTFIELD_VARIANTS)[number];
+export type INPUTFIELDSize = (typeof INPUTFIELD_SIZES)[number];
+
+export type INPUTFIELDType = "text" | "password" | "email" | "number" | "date" | "datetime-local" | "week" | "month" | "tel" | "url" | "search" | "time";
+
+export type INPUTFIELDValidatorProps = {
+  pattern?: string;
+  minlength?: number;
+  maxlength?: number;
+  title?: string;
+};
+
+export type INPUTFIELDProps = {
+  type?: INPUTFIELDType;
+  placeholder?: string;
+  size?: Size;
+  ghost?: boolean;
+  invalid?: boolean;
+  variant?: Variant;
+  disabled?: boolean;
+  suggestionName?: string;
+  suggestionList?: string[];
+  required?: boolean;
+  class?: string;
+} & INPUTFIELDValidatorProps;

@@ -1,12 +1,10 @@
 <script setup lang="ts">
   import InputError from "@/components/InputError.vue";
   import Button from "@/components/ui/Button/Button.vue";
-  import Input from "@/components/ui/Input.vue";
-  import Label from "@/components/ui/label.vue";
+  import { Input } from "@/components/ui/Input";
   import AuthLayout from "@/layouts/AuthLayout.vue";
   import { store } from "@/routes/password/confirm";
   import { Form, Head } from "@inertiajs/vue3";
-  import { LoaderCircle } from "lucide-vue-next";
 </script>
 
 <template>
@@ -16,17 +14,12 @@
     <Form v-bind="store.form()" reset-on-success v-slot="{ errors, processing }">
       <div class="space-y-6">
         <div class="grid gap-2">
-          <Label htmlFor="password">Password</Label>
-          <Input id="password" type="password" name="password" class="mt-1 block w-full" required autocomplete="current-password" autofocus />
-
+          <Input label="Password" id="password" type="password" name="password" class="mt-1 block w-full" required autocomplete="current-password" autofocus />
           <InputError :message="errors.password" />
         </div>
 
         <div class="flex items-center">
-          <Button class="w-full" :disabled="processing" data-test="confirm-password-button">
-            <LoaderCircle v-if="processing" class="h-4 w-4 animate-spin" />
-            Confirm Password
-          </Button>
+          <Button type="submit" label="Confirm Password" processing-label="Confirming..." class="w-full" :processing="processing" :disabled="processing" data-test="confirm-password-button" />
         </div>
       </div>
     </Form>

@@ -1,10 +1,11 @@
 <script setup lang="ts">
   import RegisteredUserController from "@/actions/App/Http/Controllers/Auth/RegisteredUserController";
-  // Removed custom UI components, will use daisyUI/Tailwind markup
+  import InputError from "@/components/InputError.vue";
+  import { Input } from "@/components/ui/Input";
+  import { Button } from "@/components/ui/Button";
   import AuthBase from "@/layouts/AuthLayout.vue";
   import { login } from "@/routes";
-  import { Form, Head } from "@inertiajs/vue3";
-  import { LoaderCircle } from "lucide-vue-next";
+  import { Form, Head, Link } from "@inertiajs/vue3";
 </script>
 
 <template>
@@ -14,38 +15,31 @@
     <Form v-bind="RegisteredUserController.store.form()" :reset-on-success="['password', 'password_confirmation']" v-slot="{ errors, processing }" class="flex flex-col gap-6">
       <div class="grid gap-6">
         <div class="grid gap-2">
-          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-          <input id="name" type="text" required autofocus :tabindex="1" autocomplete="name" name="name" placeholder="Full name" class="input input-bordered w-full" />
-          <span v-if="errors.name" class="text-error text-xs">{{ errors.name }}</span>
+          <Input id="name" name="name" label="Full Name" :tabindex="1" />
+          <InputError :message="errors.name" />
         </div>
 
         <div class="grid gap-2">
-          <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
-          <input id="email" type="email" required :tabindex="2" autocomplete="email" name="email" placeholder="email@example.com" class="input input-bordered w-full" />
-          <span v-if="errors.email" class="text-error text-xs">{{ errors.email }}</span>
+          <Input id="email" name="email" type="email" label="Email Address" autocomplete="email" :tabindex="2" />
+          <InputError :message="errors.email" />
         </div>
 
         <div class="grid gap-2">
-          <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-          <input id="password" type="password" required :tabindex="3" autocomplete="new-password" name="password" placeholder="Password" class="input input-bordered w-full" />
-          <span v-if="errors.password" class="text-error text-xs">{{ errors.password }}</span>
+          <Input label="Password" id="password" name="password" type="password" :tabindex="3" />
+          <InputError :message="errors.password" />
         </div>
 
         <div class="grid gap-2">
-          <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Confirm password</label>
-          <input id="password_confirmation" type="password" required :tabindex="4" autocomplete="new-password" name="password_confirmation" placeholder="Confirm password" class="input input-bordered w-full" />
-          <span v-if="errors.password_confirmation" class="text-error text-xs">{{ errors.password_confirmation }}</span>
+          <Input label="Confirm Password" id="password_confirmation" name="password_confirmation" type="password" :tabindex="4" />
+          <InputError :message="errors.password_confirmation" />
         </div>
 
-        <button type="submit" class="btn btn-primary w-full" tabindex="5" :disabled="processing" data-test="register-user-button">
-          <LoaderCircle v-if="processing" class="h-4 w-4 animate-spin" />
-          Create account
-        </button>
+        <Button :tabindex="5" label="Create Account" processing-label="Creating..." :processing="processing" type="submit" :disabled="processing" data-test="register-user-button" />
       </div>
 
       <div class="text-center text-sm text-muted-foreground">
         Already have an account?
-        <a :href="login()" class="link link-hover underline underline-offset-4" :tabindex="6">Log in</a>
+        <Link :href="login()" :tabindex="6">Log in</Link>
       </div>
     </Form>
   </AuthBase>

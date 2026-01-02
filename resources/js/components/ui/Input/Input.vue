@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import type { InputHTMLAttributes, InputTypeHTMLAttribute } from "vue";
+  import { computed, ref, type InputHTMLAttributes, type InputTypeHTMLAttribute } from "vue";
   import { cn } from "@/lib/utils";
   import type { InputVariants } from "./variants";
   import { inputVariants } from "./variants";
@@ -28,9 +28,22 @@
       required: false,
     },
   );
+
+  const isFocussed = ref(false);
+
+  const handleFocus = () => {
+    isFocussed.value = true;
+  };
+
+  const handleBlur = () => {
+    isFocussed.value = false;
+  };
+  const inputColor = computed(() => {
+    return !isFocussed.value ? `input-${props.color}` : `input-${props.focusColor}`;
+  });
 </script>
 <template>
-  <label :for="props.id" :id="`${props.id}-label`" :class="`floating-label text-${props.focusColor}`">
+  <label :for="props.id" :id="`${props.id}-label`" class="floating-label floating-label-accent">
     <span>{{ props.label }}</span>
     <input
       :type="props.type ?? 'text'"
@@ -38,11 +51,13 @@
       :name="props.name"
       :id="props.id"
       :value="props.value"
-      :class="cn(inputVariants({ color, size }), `input-${props.focusColor}`, props.class)"
+      :class="cn(inputVariants({ size }), inputColor, props.class)"
       :required="props.required"
       :autofocus="props.autofocus"
       :autocomplete="props.autocomplete"
       :tabindex="props.tabindex"
+      @focus="handleFocus"
+      @blur="handleBlur"
     />
   </label>
 </template>

@@ -1,0 +1,31 @@
+<script setup lang="ts">
+  import { type CHECKBOXProps } from "./types";
+  import { useVariantMapping } from "../../composables/useVariants";
+  import { useSizeMapping } from "../../composables/useSizes";
+  import { onMounted, ref } from "vue";
+
+  const model = defineModel();
+
+  const props = withDefaults(defineProps<CHECKBOXProps>(), {
+    checked: false,
+    disabled: false,
+    indeterminate: false,
+    variant: "default",
+    size: "default",
+  });
+
+  const currentCheckbox = ref();
+
+  const { colorClass } = useVariantMapping(props, "checkbox");
+  const { sizeClass } = useSizeMapping(props, "checkbox");
+
+  onMounted(() => {
+    if (props.indeterminate) {
+      currentCheckbox.value.indeterminate = true;
+    }
+  });
+</script>
+
+<template>
+  <input ref="currentCheckbox" type="checkbox" v-model="model" :disabled="disabled" :class="['checkbox', colorClass, sizeClass]" />
+</template>

@@ -9,7 +9,7 @@
 
   import HeadingSmall from "@/components/HeadingSmall.vue";
   import Button from "@/components/ui/Button/Button.vue";
-  import Input from "@/components/ui/Input.vue";
+  import { Input } from "@/components/ui/Input";
   import Label from "@/components/ui/label.vue";
   import { type BreadcrumbItem } from "@/types";
 

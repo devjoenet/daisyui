@@ -1,7 +1,8 @@
 <script setup lang="ts">
   import InputError from "@/components/InputError.vue";
   import Button from "@/components/ui/Button/Button.vue";
-  import Input from "@/components/ui/Input.vue";
+  import { Input } from "@/components/ui/Input";
+  import { LoaderCircle } from "lucide-vue-next";
   import AuthLayout from "@/layouts/AuthLayout.vue";
   import { store } from "@/routes/two-factor/login";
   import { Form, Head } from "@inertiajs/vue3";
@@ -71,9 +72,9 @@
 
       <template v-else>
         <Form v-bind="store.form()" class="space-y-4" reset-on-error #default="{ errors, processing, clearErrors }">
-          <Input name="recovery_code" type="text" placeholder="Enter recovery code" :autofocus="showRecoveryInput" required />
+          <Input label="Recovery Code" id="recovery_code" name="recovery_code" type="text" :autofocus="showRecoveryInput" required />
           <InputError :message="errors.recovery_code" />
-          <Button type="submit" class="w-full" :disabled="processing">Continue</Button>
+          <Button type="submit" class="w-full" :disabled="processing"> <LoaderCircle v-if="processing" class="h-4 w-4 animate-spin" /> Continue </Button>
 
           <div class="text-muted-foreground text-center text-sm">
             <span>or you can </span>

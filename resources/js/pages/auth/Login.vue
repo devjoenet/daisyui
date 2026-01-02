@@ -4,13 +4,12 @@
   import TextLink from "@/components/TextLink.vue";
   import { Button } from "@/components/ui/Button";
   import Checkbox from "@/components/ui/Checkbox.vue";
-  import Input from "@/components/ui/Input.vue";
+  import { Input } from "@/components/ui/Input";
   import Label from "@/components/ui/label.vue";
   import AuthBase from "@/layouts/AuthLayout.vue";
   import { register } from "@/routes";
   import { request } from "@/routes/password";
   import { Form, Head } from "@inertiajs/vue3";
-  import { LoaderCircle } from "lucide-vue-next";
 
   const props = defineProps<{
     status?: string;
@@ -48,10 +47,7 @@
           </Label>
         </div>
 
-        <Button type="submit" :tabindex="4" :disabled="processing" data-test="login-button">
-          <LoaderCircle v-if="processing" class="h-4 w-4 animate-spin" />
-          {{ processing ? "Logging In" : "Log In" }}
-        </Button>
+        <Button label="Log In" processing-label="Logging In..." :processing="processing" type="submit" :tabindex="4" :disabled="processing" data-test="login-button" />
       </div>
 
       <div class="text-muted-foreground text-center text-sm">
