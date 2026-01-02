@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div v-if="message" class="text-error text-sm mt-1">
-    {{ message }}
+  <div v-if="props.message" class="text-error text-sm mt-1">
+    {{ props.message }}
   </div>
 </template>

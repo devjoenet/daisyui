@@ -4,7 +4,7 @@
 
 <template>
   <div class="mb-4">
-    <h3 class="text-lg font-semibold text-fuchsia-700">{{ title }}</h3>
-    <p v-if="description" class="text-sm text-gray-500 mt-1">{{ description }}</p>
+    <h3 class="text-lg font-semibold text-fuchsia-700">{{ props.title }}</h3>
+    <p v-if="props.description" class="text-sm text-gray-500 mt-1">{{ props.description }}</p>
   </div>
 </template>
