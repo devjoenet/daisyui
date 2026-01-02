@@ -1,5 +1,5 @@
-import { type Size } from "../../composables/useSizes";
-import { type Variant } from "../../composables/useVariants";
+import { type Size } from "@/composables/useSizes";
+import { type Variant } from "@/composables/useVariants";
 
 export const SELECT_VARIANTS = ["default", "select-primary", "select-secondary", "select-accent", "select-info", "select-success", "select-warning", "select-error"] as const;
 export const SELECT_SIZES = ["default", "select-xs", "select-sm", "select-md", "select-lg", "select-xl"] as const;

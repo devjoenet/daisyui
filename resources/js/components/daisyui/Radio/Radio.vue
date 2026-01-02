@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { type RADIOProps } from "./types";
-  import { useVariantMapping } from "../../composables/useVariants";
-  import { useSizeMapping } from "../../composables/useSizes";
+  import { useVariantMapping } from "@/composables/useVariants";
+  import { useSizeMapping } from "@/composables/useSizes";
 
   const props = withDefaults(defineProps<RADIOProps>(), {
     checked: false,

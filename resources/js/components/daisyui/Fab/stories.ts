@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import Fab from "./Fab.vue";
-import { useSizeStoriesControl } from "../../composables/useSizes";
-import { useVariantStoriesControl } from "../../composables/useVariants";
+import { useSizeStoriesControl } from "@/composables/useSizes";
+import { useVariantStoriesControl } from "@/composables/useVariants";
 
 const meta = {
   title: "Components/Actions/FAB",

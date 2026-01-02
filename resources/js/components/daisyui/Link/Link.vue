@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { computed } from "vue";
   import { type LinkProps } from "./types";
-  import { useVariantMapping } from "../../composables/useVariants";
+  import { useVariantMapping } from "@/composables/useVariants";
 
   const props = withDefaults(defineProps<LinkProps>(), {
     variant: "default",

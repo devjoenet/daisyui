@@ -303,7 +303,7 @@ export const WithCustomMiddle: Story = {
 
 const withSlotsTplStr = `
 <script setup lang="ts">
-import Button from '../../Actions/button/button.vue'
+import Button from '@/Actions/button/button.vue'
 const items = [
   {
     start: '1984',
@@ -380,7 +380,7 @@ export const WithSlots: Story = {
 
 const manualModeTplStr = `
 <script setup lang="ts">
-import Button from '../../Actions/button/button.vue'
+import Button from '@/Actions/button/button.vue'
 import TimelineItem from './timeline-item.vue'
 </script>
 <Timeline modifier="timeline-box">
@@ -401,13 +401,13 @@ import TimelineItem from './timeline-item.vue'
       </div>
     </template>
   </TimelineItem>
-  <TimelineItem 
-    start="2001" 
+  <TimelineItem
+    start="2001"
     end="iPod"
     valid="true"
   />
-  <TimelineItem 
-    start="2007" 
+  <TimelineItem
+    start="2007"
     end="iPhone"
     valid="false"
   />

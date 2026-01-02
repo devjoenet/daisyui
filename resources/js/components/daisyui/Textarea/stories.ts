@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import TextArea from "./text-area.vue";
-import { useVariantStoriesControl } from "../../composables/useVariants";
-import { useSizeStoriesControl } from "../../composables/useSizes";
+import { useVariantStoriesControl } from "@/composables/useVariants";
+import { useSizeStoriesControl } from "@/composables/useSizes";
 
 const meta: Meta<typeof TextArea> = {
   title: "Components/DataInput/TextArea",

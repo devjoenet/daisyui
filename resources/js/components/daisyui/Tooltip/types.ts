@@ -1,4 +1,4 @@
-import { type Variant } from "../../composables/useVariants";
+import { type Variant } from "@/composables/useVariants";
 
 export const TOOLTIP_POSITIONS = ["top", "right", "bottom", "left"] as const;
 export type TooltipPosition = (typeof TOOLTIP_POSITIONS)[number];

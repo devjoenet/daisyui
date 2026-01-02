@@ -1,7 +1,7 @@
 import type { ArgTypes, Meta, StoryObj } from "@storybook/vue3";
 import Badge from "./badge.vue";
-import { useSizeStoriesControl } from "../../../composables/useSizes";
-import { useVariantStoriesControl } from "../../../composables/useVariants";
+import { useSizeStoriesControl } from "@/composables/useSizes";
+import { useVariantStoriesControl } from "@/composables/useVariants";
 
 const meta: Meta<typeof Badge> = {
   title: "Components/DataDisplay/Badge",

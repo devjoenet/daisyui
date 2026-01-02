@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { type CHECKBOXProps } from "./types";
-  import { useVariantMapping } from "../../composables/useVariants";
-  import { useSizeMapping } from "../../composables/useSizes";
+  import { useVariantMapping } from "@/composables/useVariants";
+  import { useSizeMapping } from "@/composables/useSizes";
   import { onMounted, ref } from "vue";
 
   const model = defineModel();

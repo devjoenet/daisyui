@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import Radio from "./Radio.vue";
-import { useVariantStoriesControl } from "../../composables/useVariants";
-import { useSizeStoriesControl } from "../../composables/useSizes";
+import { useVariantStoriesControl } from "@/composables/useVariants";
+import { useSizeStoriesControl } from "@/composables/useSizes";
 import type { ArgTypes } from "@storybook/vue3";
 
 const meta: Meta<typeof Radio> = {
@@ -40,7 +40,7 @@ const defaultTplStr = `
 const RadioColorsTplStr = `
 <div class="flex flex-col gap-4">
   <label class="flex items-center gap-2">
-    <Radio variant="primary" name="radio" /> 
+    <Radio variant="primary" name="radio" />
     <span>Primary</span>
   </label>
   <label class="flex items-center gap-2">

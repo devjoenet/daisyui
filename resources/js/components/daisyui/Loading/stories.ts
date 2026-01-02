@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import Loading from "./Loading.vue";
-import { useVariantStoriesControl } from "../../composables/useVariants";
-import { useSizeStoriesControl } from "../../composables/useSizes";
+import { useVariantStoriesControl } from "@/composables/useVariants";
+import { useSizeStoriesControl } from "@/composables/useSizes";
 import { LOADING_ANIMATIONS } from "./types";
 
 const meta: Meta<typeof Loading> = {

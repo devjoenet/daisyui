@@ -1,4 +1,4 @@
-import { type Size } from "../../composables/useSizes";
+import { type Size } from "@/composables/useSizes";
 
 export interface DockItem {
   label?: string;

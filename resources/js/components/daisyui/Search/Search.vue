@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { ref, computed, nextTick, onMounted, onBeforeUnmount, watch } from "vue";
-  import { useSizeMapping, type Size } from "../../composables/useSizes";
-  import { useVariantMapping, type Variant } from "../../composables/useVariants";
+  import { useSizeMapping, type Size } from "@/composables/useSizes";
+  import { useVariantMapping, type Variant } from "@/composables/useVariants";
   import type { SEARCHProps, SearchOption } from "./types";
 
   const props = withDefaults(defineProps<SEARCHProps>(), {

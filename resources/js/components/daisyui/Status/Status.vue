@@ -1,6 +1,6 @@
 <script setup lang="ts">
-  import { type Size, useSizeMapping } from "../../composables/useSizes";
-  import { type Variant, useVariantMapping } from "../../composables/useVariants";
+  import { type Size, useSizeMapping } from "@/composables/useSizes";
+  import { type Variant, useVariantMapping } from "@/composables/useVariants";
   import { type STATUSSize, type STATUSVariant } from "./types";
   import { computed } from "vue";
 

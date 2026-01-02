@@ -1,5 +1,5 @@
-import { type Variant } from "../../composables/useVariants";
-import { type Size } from "../../composables/useSizes";
+import { type Variant } from "@/composables/useVariants";
+import { type Size } from "@/composables/useSizes";
 
 export interface FilterButtonArgs {
   variant?: Variant;

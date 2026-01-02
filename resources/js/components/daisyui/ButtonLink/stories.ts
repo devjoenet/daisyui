@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import { useVariantStoriesControl } from "../../../composables/useVariants";
-import { useSizeStoriesControl } from "../../../composables/useSizes";
+import { useVariantStoriesControl } from "@/composables/useVariants";
+import { useSizeStoriesControl } from "@/composables/useSizes";
 import ButtonLink from "./ButtonLink.vue";
 
 const meta: Meta<typeof ButtonLink> = {

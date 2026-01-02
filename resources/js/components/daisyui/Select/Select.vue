@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { ref, computed, watch, onMounted, onBeforeUnmount, nextTick } from "vue";
-  import { useSizeMapping } from "../../composables/useSizes";
-  import { useVariantMapping } from "../../composables/useVariants";
+  import { useSizeMapping } from "@/composables/useSizes";
+  import { useVariantMapping } from "@/composables/useVariants";
   import type { SELECTProps } from "./types";
 
   const props = withDefaults(defineProps<SELECTProps>(), {

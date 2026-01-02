@@ -1,6 +1,6 @@
 <script setup lang="ts">
-  import { useVariantMapping } from "../../composables/useVariants";
-  import { AvailableSizes } from "../../composables/useSizes";
+  import { useVariantMapping } from "@/composables/useVariants";
+  import { AvailableSizes } from "@/composables/useSizes";
   import { type RadialProgressProps } from "./types";
   import { computed } from "vue";
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { type Size, useSizeMapping } from "../../composables/useSizes";
+  import { type Size, useSizeMapping } from "@/composables/useSizes";
   import { type KBDSize } from "./types";
 
   const props = withDefaults(

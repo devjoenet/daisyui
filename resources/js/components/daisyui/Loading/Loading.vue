@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { computed } from "vue";
-  import { useVariantMapping } from "../../composables/useVariants";
-  import { useSizeMapping } from "../../composables/useSizes";
+  import { useVariantMapping } from "@/composables/useVariants";
+  import { useSizeMapping } from "@/composables/useSizes";
   import { type LoadingProps } from "./types";
 
   const props = withDefaults(defineProps<LoadingProps>(), {

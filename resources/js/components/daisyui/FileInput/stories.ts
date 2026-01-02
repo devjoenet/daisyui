@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import FileInput from "./FileInput.vue";
-import { useVariantStoriesControl } from "../../composables/useVariants";
-import { useSizeStoriesControl } from "../../composables/useSizes";
+import { useVariantStoriesControl } from "@/composables/useVariants";
+import { useSizeStoriesControl } from "@/composables/useSizes";
 import type { ArgTypes } from "@storybook/vue3";
 
 const meta: Meta<typeof FileInput> = {

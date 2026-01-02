@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import Menu from "./Menu.vue";
 import { Button } from "../Button";
-import { useSizeStoriesControl } from "../../composables/useSizes";
+import { useSizeStoriesControl } from "@/composables/useSizes";
 import { MENU_DIRECTIONS } from "./types";
 
 const meta: Meta<typeof Menu> = {

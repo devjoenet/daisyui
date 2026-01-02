@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import InputField from "./InputField.vue";
 import { Label } from "../Label";
-import Kbd from "../../DataDisplay/kbd/kbd.vue";
+import Kbd from "@/DataDisplay/kbd/kbd.vue";
 import { Badge } from "../Badge";
 import { Fieldset } from "../Fieldset";
 
@@ -59,7 +59,7 @@ const ColorsInputTplStr = `
   <InputField placeholder="primary" variant="primary" v-bind="args" />
   <InputField placeholder="secondary" variant="secondary" v-bind="args" />
   <InputField placeholder="accent" variant="accent" v-bind="args" />
-  
+
   <InputField placeholder="info" variant="info" v-bind="args" />
   <InputField placeholder="success" variant="success" v-bind="args" />
   <InputField placeholder="warning" variant="warning" v-bind="args" />
@@ -79,10 +79,10 @@ const DisabledInputTplStr = `
 <InputField placeholder="You can't touch this" disabled v-bind="args" />`;
 
 const TextInputWithDataListSuggestionTplStr = `
-<InputField 
-  placeholder="Which browser do you use" 
-  suggestion-name="browsers" 
-  :suggestion-list="['Chrome', 'Firefox', 'Safari', 'Opera', 'Edge']" 
+<InputField
+  placeholder="Which browser do you use"
+  suggestion-name="browsers"
+  :suggestion-list="['Chrome', 'Firefox', 'Safari', 'Opera', 'Edge']"
   v-bind="args" />`;
 
 // DEFAULT

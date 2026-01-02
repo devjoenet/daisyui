@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { computed } from "vue";
   import { type TABLEProps } from "./types";
-  import { useSizeMapping } from "../../composables/useSizes";
+  import { useSizeMapping } from "@/composables/useSizes";
 
   const props = withDefaults(defineProps<TABLEProps>(), {
     columns: undefined,

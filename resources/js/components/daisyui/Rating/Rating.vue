@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { computed, provide, ref, watch } from "vue";
-  import { useSizeMapping } from "../../composables/useSizes";
+  import { useSizeMapping } from "@/composables/useSizes";
   import RatingItem from "./RatingItem.vue";
   import { type RatingProps, type RatingEmits } from "./types";
 

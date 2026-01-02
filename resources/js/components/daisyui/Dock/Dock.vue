@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { ref } from "vue";
   import { type DockProps } from "./types";
-  import { useSizeMapping } from "../../composables/useSizes";
+  import { useSizeMapping } from "@/composables/useSizes";
 
   const props = withDefaults(defineProps<DockProps>(), {
     size: "default",

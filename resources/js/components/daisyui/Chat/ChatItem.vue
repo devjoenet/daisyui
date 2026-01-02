@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { computed, inject } from "vue";
-  import { type Variant, useVariantMapping } from "../../composables/useVariants";
+  import { type Variant, useVariantMapping } from "@/composables/useVariants";
   import { type CHATColor, type ChatPlacement } from "./types";
 
   interface ChatItemProps {

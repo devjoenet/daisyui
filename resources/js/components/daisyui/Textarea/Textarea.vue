@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { type TEXTAREAProps } from "./types";
-  import { useVariantMapping } from "../../composables/useVariants";
-  import { useSizeMapping } from "../../composables/useSizes";
+  import { useVariantMapping } from "@/composables/useVariants";
+  import { useSizeMapping } from "@/composables/useSizes";
   import { computed } from "vue";
 
   const props = withDefaults(defineProps<TEXTAREAProps>(), {

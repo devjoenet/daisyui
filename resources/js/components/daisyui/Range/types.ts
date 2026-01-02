@@ -1,5 +1,5 @@
-import { type Variant } from "../../composables/useVariants";
-import { type Size } from "../../composables/useSizes";
+import { type Variant } from "@/composables/useVariants";
+import { type Size } from "@/composables/useSizes";
 
 export const RANGE_VARIANTS = ["default", "range-primary", "range-secondary", "range-accent", "range-info", "range-success", "range-warning", "range-error"] as const;
 export const RANGE_SIZES = ["default", "range-xs", "range-sm", "range-md", "range-lg", "range-xl"] as const;

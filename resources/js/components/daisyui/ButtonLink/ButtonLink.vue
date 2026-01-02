@@ -1,8 +1,8 @@
 <script setup lang="ts">
   import { computed } from "vue";
   import { type ButtonLinkProps } from "./types";
-  import { useVariantMapping } from "../../composables/useVariants";
-  import { useSizeMapping } from "../../composables/useSizes";
+  import { useVariantMapping } from "@/composables/useVariants";
+  import { useSizeMapping } from "@/composables/useSizes";
 
   const props = withDefaults(defineProps<ButtonLinkProps>(), {
     size: "default",

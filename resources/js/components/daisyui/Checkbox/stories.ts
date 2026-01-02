@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import Checkbox from "./Checkbox.vue";
-import { useVariantStoriesControl } from "../../composables/useVariants";
-import { useSizeStoriesControl } from "../../composables/useSizes";
+import { useVariantStoriesControl } from "@/composables/useVariants";
+import { useSizeStoriesControl } from "@/composables/useSizes";
 import type { ArgTypes } from "@storybook/vue3";
 
 const meta: Meta<typeof Checkbox> = {
@@ -52,7 +52,7 @@ export const Default = { ...TemplateCheckbox };
 
 const CheckboxColorsTplStr = `
 <div class="flex gap-4">
-    <Checkbox checked variant="primary" /> 
+    <Checkbox checked variant="primary" />
     <Checkbox checked variant="secondary" />
     <Checkbox checked variant="accent" />
     <Checkbox checked variant="info" />

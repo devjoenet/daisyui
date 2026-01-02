@@ -1,6 +1,6 @@
 <script setup lang="ts">
-  import { type Size, useSizeMapping } from "../../composables/useSizes";
-  import { useVariantMapping, type Variant } from "../../composables/useVariants";
+  import { type Size, useSizeMapping } from "@/composables/useSizes";
+  import { useVariantMapping, type Variant } from "@/composables/useVariants";
   import { computed } from "vue";
   import { type AVATARRounded, type Rounded, type AVATARMask, type Mask } from "./types";
 

@@ -1,5 +1,5 @@
-import { type Variant } from "../../composables/useVariants";
-import { type Size } from "../../composables/useSizes";
+import { type Variant } from "@/composables/useVariants";
+import { type Size } from "@/composables/useSizes";
 
 export const CHECKBOX_VARIANTS = ["default", "checkbox-primary", "checkbox-secondary", "checkbox-accent", "checkbox-info", "checkbox-success", "checkbox-warning", "checkbox-error"] as const;
 export const CHECKBOX_SIZES = ["default", "checkbox-xs", "checkbox-sm", "checkbox-md", "checkbox-lg", "checkbox-xl"] as const;

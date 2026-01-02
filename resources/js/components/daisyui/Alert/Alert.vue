@@ -1,8 +1,6 @@
 <script setup lang="ts">
-  import { computed, onMounted, ref, useSlots } from "vue";
+  import { computed, onMounted, ref } from "vue";
   import { type AlertProps } from "./types";
-
-  const slots = useSlots();
 
   const props = withDefaults(defineProps<AlertProps>(), {
     variant: "default",
@@ -91,9 +89,9 @@
   <div role="alert" v-if="visible" :class="['alert', alertColorClass, softClass, outlineClass, dashClass, directionClass]">
     <template v-if="icon"><span v-html="svgIcons[variant]"></span></template>
     <slot>Default alert</slot>
-    <div v-if="$slots.actions || dismissible">
+    <div v-if="$slots.actions || props.dismissible">
       <slot name="actions"></slot>
-      <button v-if="dismissible" @click="onClick" class="btn btn-sm">X</button>
+      <button v-if="props.dismissible" @click="onClick" class="btn btn-sm">X</button>
     </div>
   </div>
 </template>

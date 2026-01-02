@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { useVariantMapping } from "../../composables/useVariants";
+  import { useVariantMapping } from "@/composables/useVariants";
   import { type ProgressProps } from "./types";
 
   const props = withDefaults(defineProps<ProgressProps>(), {

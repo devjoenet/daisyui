@@ -37,7 +37,7 @@ const basicTplStr = `
       <p class="mt-4">Page content here</p>
     </div>
   </template>
-  
+
   <template #sidebar>
     <Menu class="w-full">
       <li><a>Sidebar Item 1</a></li>
@@ -110,7 +110,7 @@ const drawerEndTplStr = `
       </Button>
     </div>
   </template>
-  
+
   <template #sidebar>
     <Menu class="w-full">
       <li><a>Sidebar Item 1</a></li>
@@ -137,7 +137,7 @@ const alwaysOpenTplStr = `
       <p class="mt-4">Sidebar is always visible on large screens</p>
     </div>
   </template>
-  
+
   <template #sidebar>
     <Menu class="w-full">
       <li><a>Sidebar Item 1</a></li>
@@ -180,14 +180,14 @@ const withNavbarTplStr = `
           </div>
         </template>
       </Navbar>
-      
+
       <!-- Page Content -->
       <div class="flex justify-center items-center grow">
         <p>Content</p>
       </div>
     </div>
   </template>
-  
+
   <template #sidebar>
     <Menu class="w-full">
       <li><a>Sidebar Item 1</a></li>
@@ -200,8 +200,8 @@ const withNavbarTplStr = `
 
 const withNavbarSetupStr = `
 <script setup>
-import Navbar from '../../Navigation/navbar/navbar.vue'
-import Menu from '../../Navigation/menu/menu.vue'
+import Navbar from '@/Navigation/navbar/navbar.vue'
+import Menu from '@/Navigation/menu/menu.vue'
 // Navbar with drawer for mobile, menu for desktop
 </script>
 `;
@@ -211,7 +211,7 @@ const controlledTplStr = `
   <Button @click="isOpen = !isOpen">
     {{ isOpen ? 'Close' : 'Open' }} Drawer
   </Button>
-  
+
   <Drawer v-model="isOpen" id="my-drawer-controlled">
     <template #content>
       <div class="flex flex-col items-center justify-center min-h-screen">
@@ -221,7 +221,7 @@ const controlledTplStr = `
         </Button>
       </div>
     </template>
-    
+
     <template #sidebar>
       <Menu class="w-full">
         <li><a @click="isOpen = false">Close drawer</a></li>
@@ -242,7 +242,7 @@ const isOpen = ref(false)
 `;
 
 const customClassesTplStr = `
-<Drawer 
+<Drawer
   id="my-drawer-custom"
   sidebarClass="bg-primary text-primary-content"
   contentClass="bg-base-300"
@@ -254,7 +254,7 @@ const customClassesTplStr = `
       </Button>
     </div>
   </template>
-  
+
   <template #sidebar>
     <Menu class="w-full">
       <li><a>Sidebar Item 1</a></li>

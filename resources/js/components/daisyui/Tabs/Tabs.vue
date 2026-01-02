@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { computed } from "vue";
   import { type TabsProps } from "./types";
-  import { useSizeMapping } from "../../composables/useSizes";
+  import { useSizeMapping } from "@/composables/useSizes";
 
   const props = withDefaults(defineProps<TabsProps>(), {
     size: "default",

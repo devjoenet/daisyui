@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import Tabs from "./tabs.vue";
 import { Button } from "../Button";
-import { useSizeStoriesControl } from "../../composables/useSizes";
+import { useSizeStoriesControl } from "@/composables/useSizes";
 import { TABS_TYPES } from "./types";
 
 const meta: Meta<typeof Tabs> = {

@@ -20,11 +20,11 @@
 </script>
 
 <template>
-  <div :class="['collapse', 'bg-base-100 border border-base-300', customClass]">
-    <input type="radio" :name="accordionName" :checked="checked ? true : undefined" />
+  <div :class="['collapse', 'bg-base-100 border border-base-300', props.customClass]">
+    <input type="radio" :name="accordionName" :checked="props.checked ? true : undefined" />
     <div class="collapse-title">
       <slot name="title">
-        {{ title }}
+        {{ props.title }}
       </slot>
     </div>
     <div class="collapse-content">

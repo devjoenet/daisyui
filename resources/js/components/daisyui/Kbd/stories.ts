@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import Kbd from "./Kbd.vue";
-import { useSizeStoriesControl } from "../../composables/useSizes";
+import { useSizeStoriesControl } from "@/composables/useSizes";
 import type { ArgTypes } from "@storybook/vue3";
 
 const meta: Meta<typeof Kbd> = {

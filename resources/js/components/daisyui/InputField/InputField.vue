@@ -1,6 +1,6 @@
 <script setup lang="ts">
-  import { useSizeMapping } from "../../composables/useSizes";
-  import { useVariantMapping } from "../../composables/useVariants";
+  import { useSizeMapping } from "@/composables/useSizes";
+  import { useVariantMapping } from "@/composables/useVariants";
   import { computed, inject } from "vue";
   import { type INPUTFIELDProps } from "./types";
 

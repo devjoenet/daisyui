@@ -2,8 +2,8 @@
   import { computed } from "vue";
   import { Join } from "../Join";
   import { type PaginationProps } from "./types";
-  import { useSizeMapping } from "../../composables/useSizes";
-  import { useVariantMapping } from "../../composables/useVariants";
+  import { useSizeMapping } from "@/composables/useSizes";
+  import { useVariantMapping } from "@/composables/useVariants";
 
   const props = withDefaults(defineProps<PaginationProps>(), {
     modelValue: 1,

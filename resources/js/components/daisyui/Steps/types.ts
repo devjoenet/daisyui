@@ -1,4 +1,4 @@
-import { type Variant } from "../../composables/useVariants";
+import { type Variant } from "@/composables/useVariants";
 
 export const STEPS_DIRECTIONS = ["steps-vertical", "steps-horizontal"] as const;
 export type StepsDirection = (typeof STEPS_DIRECTIONS)[number];

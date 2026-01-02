@@ -2,7 +2,7 @@ import type { ArgTypes, Meta, StoryObj } from "@storybook/vue3";
 import Card from "./card.vue";
 import Button from "../Button";
 import Badge from "../Badge";
-import { useSizeStoriesControl } from "../../composables/useSizes";
+import { useSizeStoriesControl } from "@/composables/useSizes";
 
 const meta: Meta<typeof Card> = {
   title: "Components/Card",
@@ -106,7 +106,7 @@ const cardSizesTplStr = `
       <p>Une carte avec la taille extra-small.</p>
     </div>
   </Card>
-  
+
   <Card size="sm" class="w-80 bg-base-100 shadow-sm">
     <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Card Image" /></figure>
     <div class="card-body">
@@ -114,7 +114,7 @@ const cardSizesTplStr = `
       <p>Une carte avec la taille small.</p>
     </div>
   </Card>
-  
+
   <Card size="md" class="w-96 bg-base-100 shadow-sm">
     <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Card Image" /></figure>
     <div class="card-body">
@@ -122,7 +122,7 @@ const cardSizesTplStr = `
       <p>Une carte avec la taille medium.</p>
     </div>
   </Card>
-  
+
   <Card size="lg" class="w-full max-w-md bg-base-100 shadow-sm">
     <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Card Image" /></figure>
     <div class="card-body">
@@ -142,7 +142,7 @@ const cardBorderedTplStr = `
       <p>Une carte avec une bordure pleine.</p>
     </div>
   </Card>
-  
+
   <Card dash class="w-80 bg-base-100 shadow-sm">
     <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Card Image" /></figure>
     <div class="card-body">
@@ -165,7 +165,7 @@ const cardSideTplStr = `
       </div>
     </div>
   </Card>
-  
+
   <Card responsive class="w-full bg-base-100 shadow-sm">
     <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Card Image" class="w-48" /></figure>
     <div class="card-body">

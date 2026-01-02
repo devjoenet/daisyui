@@ -1,5 +1,5 @@
-import { type Size } from "../../composables/useSizes";
-import { type Variant } from "../../composables/useVariants";
+import { type Size } from "@/composables/useSizes";
+import { type Variant } from "@/composables/useVariants";
 
 export const SEARCH_VARIANTS = ["default", "input-primary", "input-secondary", "input-accent", "input-info", "input-success", "input-warning", "input-error"] as const;
 export const SEARCH_SIZES = ["default", "input-xs", "input-sm", "input-md", "input-lg", "input-xl"] as const;

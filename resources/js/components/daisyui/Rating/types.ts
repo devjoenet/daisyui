@@ -1,4 +1,4 @@
-import { type Size } from "../../composables/useSizes";
+import { type Size } from "@/composables/useSizes";
 
 export interface RatingItem {
   value: number;

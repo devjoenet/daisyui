@@ -1,8 +1,7 @@
 <script setup lang="ts">
-  import { computed, onMounted, ref } from "vue";
-  import { type Variant, useVariantMapping } from "../../composables/useVariants";
-  import { type Size, useSizeMapping } from "../../composables/useSizes";
-  import { type BADGESize, type BADGEVariant } from "./types";
+  import { computed } from "vue";
+  import { type Variant, useVariantMapping } from "@/composables/useVariants";
+  import { type Size, useSizeMapping } from "@/composables/useSizes";
 
   const props = withDefaults(
     defineProps<{
@@ -54,6 +53,7 @@
       }
       return "";
     }
+    return "";
   });
 </script>
 <template>

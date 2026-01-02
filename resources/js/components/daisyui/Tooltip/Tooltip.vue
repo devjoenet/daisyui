@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { computed, useSlots } from "vue";
-  import { useVariantMapping } from "../../composables/useVariants";
+  import { useVariantMapping } from "@/composables/useVariants";
   import { type TooltipProps } from "./types";
 
   const slots = useSlots();

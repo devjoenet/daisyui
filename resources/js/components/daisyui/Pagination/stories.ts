@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import { ref } from "vue";
 import Pagination from "./Pagination.vue";
-import { useSizeStoriesControl } from "../../composables/useSizes";
-import { useVariantStoriesControl } from "../../composables/useVariants";
+import { useSizeStoriesControl } from "@/composables/useSizes";
+import { useVariantStoriesControl } from "@/composables/useVariants";
 
 const meta: Meta<typeof Pagination> = {
   title: "Components/Navigation/Pagination",

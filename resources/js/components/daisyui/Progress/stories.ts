@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import Progress from "./Progress.vue";
-import { useVariantStoriesControl } from "../../composables/useVariants";
+import { useVariantStoriesControl } from "@/composables/useVariants";
 
 const meta: Meta<typeof Progress> = {
   title: "Components/Feedback/Progress",

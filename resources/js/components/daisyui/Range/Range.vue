@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { type RANGEProps } from "./types";
-  import { useVariantMapping } from "../../composables/useVariants";
-  import { useSizeMapping } from "../../composables/useSizes";
+  import { useVariantMapping } from "@/composables/useVariants";
+  import { useSizeMapping } from "@/composables/useSizes";
   import { ref, computed, watch } from "vue";
 
   const props = withDefaults(defineProps<RANGEProps>(), {

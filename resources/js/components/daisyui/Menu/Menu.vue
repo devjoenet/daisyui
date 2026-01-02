@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { computed, inject } from "vue";
   import { type MenuProps } from "./types";
-  import { useSizeMapping } from "../../composables/useSizes";
+  import { useSizeMapping } from "@/composables/useSizes";
   import MenuItem from "./MenuItem.vue";
 
   const props = withDefaults(defineProps<MenuProps>(), {

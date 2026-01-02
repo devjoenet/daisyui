@@ -1,4 +1,4 @@
-import { type Size } from "../../composables/useSizes";
+import { type Size } from "@/composables/useSizes";
 
 export const TABS_TYPES = ["lift", "border", "box"] as const;
 export type TabsType = (typeof TABS_TYPES)[number];

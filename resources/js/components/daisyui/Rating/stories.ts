@@ -1,7 +1,7 @@
 import type { Meta, StoryObj, ArgTypes } from "@storybook/vue3";
 import Rating from "./Rating.vue";
 import RatingItem from "./RatingItem.vue";
-import { useSizeStoriesControl } from "../../composables/useSizes";
+import { useSizeStoriesControl } from "@/composables/useSizes";
 import { ref } from "vue";
 import { RATING_SHAPES } from "./types";
 

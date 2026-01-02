@@ -1,4 +1,4 @@
-import { type Variant } from "../../composables/useVariants";
+import { type Variant } from "@/composables/useVariants";
 
 export interface StepItemProps {
   label?: string;

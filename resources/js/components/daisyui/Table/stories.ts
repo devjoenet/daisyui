@@ -3,7 +3,7 @@ import Table from "./table.vue";
 import TableItem from "./table-item.vue";
 import { Badge } from "../Badge";
 import { Button } from "../Button";
-import { useSizeStoriesControl } from "../../composables/useSizes";
+import { useSizeStoriesControl } from "@/composables/useSizes";
 import type { ArgTypes } from "@storybook/vue3";
 
 const meta = {

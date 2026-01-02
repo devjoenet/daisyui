@@ -1,4 +1,4 @@
-import { type Size } from "../../composables/useSizes";
+import { type Size } from "@/composables/useSizes";
 
 export const MENU_DIRECTIONS = ["default", "vertical", "horizontal", "responsive"] as const;
 export type MenuDirection = (typeof MENU_DIRECTIONS)[number];

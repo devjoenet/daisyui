@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { computed } from "vue";
-  import { type Size, useSizeMapping } from "../../composables/useSizes";
-  import { type Variant, useVariantMapping } from "../../composables/useVariants";
+  import { type Size, useSizeMapping } from "@/composables/useSizes";
+  import { type Variant, useVariantMapping } from "@/composables/useVariants";
   import { type FABItem, type FABMainAction, type FABCloseButton } from "./types";
   import { Button } from "../Button";
   import { Tooltip } from "../Tooltip";

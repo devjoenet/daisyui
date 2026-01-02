@@ -1,7 +1,6 @@
 <script setup lang="ts">
-  import { type Size, useSizeMapping } from "../../composables/useSizes";
-  import { useVariantMapping, type Variant } from "../../composables/useVariants";
-  import { type BUTTONColor, type BUTTONSize } from "./types";
+  import { type Size, useSizeMapping } from "@/composables/useSizes";
+  import { useVariantMapping, type Variant } from "@/composables/useVariants";
   import { computed, inject } from "vue";
 
   type ElementType = "button" | "a" | "input" | "div" | "RouterLink" | "NuxtLink" | string;

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import { useVariantStoriesControl } from "../../../composables/useVariants";
+import { useVariantStoriesControl } from "@/composables/useVariants";
 import Link from "./link.vue";
 
 const meta: Meta<typeof Link> = {
