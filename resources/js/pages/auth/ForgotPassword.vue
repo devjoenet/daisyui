@@ -2,8 +2,8 @@
   import PasswordResetLinkController from "@/actions/App/Http/Controllers/Auth/PasswordResetLinkController";
   import InputError from "@/components/InputError.vue";
   import TextLink from "@/components/TextLink.vue";
-  import Button from "@/components/ui/button.vue";
-  import Input from "@/components/ui/input.vue";
+  import Button from "@/components/ui/Button/Button.vue";
+  import Input from "@/components/ui/Input.vue";
   import Label from "@/components/ui/label.vue";
   import AuthLayout from "@/layouts/AuthLayout.vue";
   import { login } from "@/routes";
@@ -39,7 +39,7 @@
         </div>
       </Form>
 
-      <div class="space-x-1 text-center text-sm text-muted-foreground">
+      <div class="text-muted-foreground space-x-1 text-center text-sm">
         <span>Or, return to</span>
         <TextLink :href="login()">log in</TextLink>
       </div>

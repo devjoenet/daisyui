@@ -32,7 +32,7 @@
               <!-- Steps -->
               <div class="space-y-4 mb-6">
                 <div class="flex items-center gap-4">
-                  <div class="w-4 h-4 rounded-full bg-base-300 flex-shrink-0"></div>
+                  <div class="w-4 h-4 rounded-full bg-base-300 shrink-0"></div>
                   <span class="text-sm">
                     Read the
                     <a href="https://laravel.com/docs" target="_blank" class="link link-primary font-medium inline-flex items-center gap-1 ml-1">
@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="flex items-center gap-4">
-                  <div class="w-4 h-4 rounded-full bg-base-300 flex-shrink-0"></div>
+                  <div class="w-4 h-4 rounded-full bg-base-300 shrink-0"></div>
                   <span class="text-sm">
                     Watch video tutorials at
                     <a href="https://laracasts.com" target="_blank" class="link link-primary font-medium inline-flex items-center gap-1 ml-1">

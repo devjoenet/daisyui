@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import InputError from "@/components/InputError.vue";
-  import Button from "@/components/ui/button.vue";
-  import Input from "@/components/ui/input.vue";
+  import Button from "@/components/ui/Button/Button.vue";
+  import Input from "@/components/ui/Input.vue";
   import AuthLayout from "@/layouts/AuthLayout.vue";
   import { store } from "@/routes/two-factor/login";
   import { Form, Head } from "@inertiajs/vue3";
@@ -60,7 +60,7 @@
             <InputError :message="errors.code" />
           </div>
           <Button type="submit" class="w-full" :disabled="processing">Continue</Button>
-          <div class="text-center text-sm text-muted-foreground">
+          <div class="text-muted-foreground text-center text-sm">
             <span>or you can </span>
             <button type="button" class="text-foreground underline decoration-neutral-300 underline-offset-4 transition-colors duration-300 ease-out hover:decoration-current! dark:decoration-neutral-500" @click="() => toggleRecoveryMode(clearErrors)">
               {{ authConfigContent.toggleText }}
@@ -75,7 +75,7 @@
           <InputError :message="errors.recovery_code" />
           <Button type="submit" class="w-full" :disabled="processing">Continue</Button>
 
-          <div class="text-center text-sm text-muted-foreground">
+          <div class="text-muted-foreground text-center text-sm">
             <span>or you can </span>
             <button type="button" class="text-foreground underline decoration-neutral-300 underline-offset-4 transition-colors duration-300 ease-out hover:decoration-current! dark:decoration-neutral-500" @click="() => toggleRecoveryMode(clearErrors)">
               {{ authConfigContent.toggleText }}

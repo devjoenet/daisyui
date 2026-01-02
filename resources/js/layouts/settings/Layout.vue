@@ -1,6 +1,5 @@
 <script setup lang="ts">
   import Heading from "@/components/Heading.vue";
-  import Button from "@/components/ui/button.vue";
   import Separator from "@/components/ui/separator.vue";
   import { toUrl, urlIsActive } from "@/lib/utils";
   import { edit as editAppearance } from "@/routes/appearance";

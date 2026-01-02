@@ -1,8 +1,8 @@
 <script setup lang="ts">
   import NewPasswordController from "@/actions/App/Http/Controllers/Auth/NewPasswordController";
   import InputError from "@/components/InputError.vue";
-  import Button from "@/components/ui/button.vue";
-  import Input from "@/components/ui/input.vue";
+  import Button from "@/components/ui/Button/Button.vue";
+  import Input from "@/components/ui/Input.vue";
   import Label from "@/components/ui/label.vue";
   import AuthLayout from "@/layouts/AuthLayout.vue";
   import { Form, Head } from "@inertiajs/vue3";
