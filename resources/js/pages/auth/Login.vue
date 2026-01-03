@@ -42,11 +42,10 @@
 
         <div class="flex items-center justify-between">
           <Label for="remember" class="flex items-center space-x-3">
-            <Checkbox id="remember" name="remember" :tabindex="3" />
+            <Checkbox id="remember" class="checked:bg-accent checked:text-accent-content" name="remember" :tabindex="3" />
             <span>Remember me</span>
           </Label>
         </div>
-
         <Button label="Log In" processing-label="Logging In..." :processing="processing" type="submit" :tabindex="4" :disabled="processing" data-test="login-button" />
       </div>
 

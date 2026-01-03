@@ -1,10 +1,11 @@
 <script setup lang="ts">
   import { computed } from "vue";
   import { type Size, useSizeMapping } from "@/composables/useSizes";
-  import { type CARDSize, type CARDProperty } from "./types";
 
   const props = withDefaults(
     defineProps<{
+      color?: string;
+      textColor?: string;
       size?: Size;
       bordered?: boolean;
       dash?: boolean;
@@ -12,15 +13,17 @@
       imageFull?: boolean;
       responsive?: boolean;
       title?: string;
+      description?: string;
     }>(),
     {
+      color: "base-200",
+      textColor: "base-content",
       size: "default",
       bordered: false,
       dash: false,
       side: false,
       imageFull: false,
       responsive: false,
-      title: "",
     },
   );
 
@@ -48,27 +51,17 @@
 </script>
 
 <template>
-  <div :class="['card', sizeClass, borderedClass, dashClass, sideClass, responsiveClass, imageFullClass]">
-    <slot name="figure"></slot>
-
-    <template v-if="$slots.body">
-      <slot name="body"></slot>
-      <slot name="default"></slot>
-    </template>
-
-    <div v-else-if="$slots.title || $slots.actions || $slots.default || title" class="card-body">
-      <h2 v-if="title || $slots.title" class="card-title flex-wrap">
-        <template v-if="title">{{ title }}</template>
-        <slot name="title"></slot>
-      </h2>
-
-      <slot></slot>
-
-      <div v-if="$slots.actions" class="card-actions">
-        <slot name="actions"></slot>
+  <div :class="['card', `bg-${props.color}`, `bg-${props.textColor}`, sizeClass, borderedClass, dashClass, sideClass, responsiveClass, imageFullClass]">
+    <slot name="figure" />
+    <div class="card-body">
+      <h2 v-if="props.title" class="text-base-content text-xl card-title flex-wrap">{{ props.title }}</h2>
+      <p v-if="props.description" class="text-base-content text-sm py-6">{{ props.description }}</p>
+      <div v-if="$slots.default" class="px-10 py-8">
+        <slot />
       </div>
     </div>
-
-    <slot name="content"></slot>
+    <div v-if="$slots.actions" class="card-actions justify-end">
+      <slot name="actions" />
+    </div>
   </div>
 </template>
